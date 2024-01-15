@@ -9,14 +9,6 @@ const movies = [
 
   const numbers = ['a', 'b', 'c', 'd', 'e'];	
 
-  const printPiers = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            console.log(arr[i], arr[j]);
-        }
-    }
-  }
-  
 
 
 const findValue = (arr) => {
@@ -64,16 +56,6 @@ const findFirstMiddleElement = (arr) => {
 }
 
 
-const printHyNtimes = (n) => {
-    let arr = [];
-    for (let i = 0; i < n; i++) {
-        arr[i] = 'hy'
-    }
-    return arr;
-}
-
-let result = printHyNtimes(8);
-console.log(result);
 
 
 // findFirstMiddleElement(movies);
