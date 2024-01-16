@@ -51,5 +51,31 @@ const compareDuplicate2 = (arr1, arr2) => {
     return false;
 }
 
-const result = compareDuplicate2(arr1, arr2);
-console.log(result);
+// const result = compareDuplicate2(arr1, arr2);
+// console.log(result);
+
+
+
+// Write a function that takes two arrays as input and returns an array containing the common elements between them.
+
+const compareDuplicateAndReturnArr = (arr1, arr2) => {
+    let map = {};
+    let comparedElements = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (!map[arr1[i]]) {
+            map[arr1[i]] = true;
+        }
+    }
+    // console.log(map);
+
+    for (let j = 0; j < arr2.length; j++) {
+        if (map[arr2[j]]) {
+            let result = map[arr2[j]];
+            comparedElements.push(arr2[j])
+        }
+    }
+    console.log(comparedElements);
+}
+
+compareDuplicateAndReturnArr(arr1, arr2)
