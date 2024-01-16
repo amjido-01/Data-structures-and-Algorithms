@@ -24,5 +24,32 @@ const compareDuplicate = (arr1, arr2) => {
     return false;
 };
 
-const result = compareDuplicate(arr1, arr2);
+// O(a * b);
+// O(1);
+// const result = compareDuplicate(arr1, arr2);
+// console.log(result);
+
+
+
+// Best solution.
+
+const compareDuplicate2 = (arr1, arr2) => {
+    const map = {};
+    for (let i = 0; i < arr1.length; i++) {
+        if (!map[arr1[i]]) {
+            map[arr1[i]] = true;
+        }
+    }
+    // console.log(map)
+
+    for (let j = 0; j < arr2.length; j++) {
+        if (map[arr2[j]]) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+const result = compareDuplicate2(arr1, arr2);
 console.log(result);
