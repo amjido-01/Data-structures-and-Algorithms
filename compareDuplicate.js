@@ -78,4 +78,35 @@ const compareDuplicateAndReturnArr = (arr1, arr2) => {
     console.log(comparedElements);
 }
 
-compareDuplicateAndReturnArr(arr1, arr2)
+// compareDuplicateAndReturnArr(arr1, arr2)
+
+
+
+
+// Modify the provided solution to handle case-insensitive string elements. For example, 'Apple' and 'apple' should be considered the same.
+
+const firstArr = ['apple', 'orange', 'tomato'];
+const secondArr = ['Apple', 'fish', 'banana'];
+
+const compareDuplicateCaseInsensitive = (arr1, arr2) => {
+    let map = {};
+    let comparedSameElements = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (!map[arr1[i]]) {
+           let upper =  arr1[i].toUpperCase()
+           map[upper] = true;
+        }
+    }
+    // console.log(map);
+
+    for (let j = 0; j < arr2.length; j++) {
+        let upper = arr2[j].toUpperCase();
+        if (map[upper]) {
+            comparedSameElements.push(upper);
+        }
+    }
+    console.log(comparedSameElements);
+}
+
+compareDuplicateCaseInsensitive(firstArr, secondArr)
