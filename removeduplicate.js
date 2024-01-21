@@ -1,8 +1,10 @@
 const nums = [1, 1, 2];
-const expectedArr = [];
 
-const removeDup = (arr, expectedArr) => {
+
+// brutal force solution
+const removeDup = (arr) => {
    let map = {};
+   let expectedArr = [];
 
    for (let i = 0; i < arr.length; i++) {
     map[arr[i]] = true
@@ -13,8 +15,43 @@ const removeDup = (arr, expectedArr) => {
             expectedArr.push(arr[j])
         }
     }
-    console.log(expectedArr, 'hy');
+    return expectedArr
 }
 
-let result = removeDup(nums, expectedArr)
-console.log(result)
+
+
+const removeDup2 = function(nums) {
+    let map = {};
+    let k = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (!map[nums[i]]) {
+            map[nums[i]] = true;
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+
+    nums.length = k;
+
+    return k;
+};
+
+
+// the best solution over all
+// const nums = [1, 1, 2];
+const removeDup3 = (nums) => {
+    let k = 1;
+
+    for (let i = 0; i < nums.length -1; i++) {
+        if (nums[i] !== nums[i + 1]) {
+            nums[k] = nums[i + 1];
+            k++
+            // console.log(k++)
+        }
+    }
+    return k
+}
+
+const result = removeDup3(nums)
+console.log(result);

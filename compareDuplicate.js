@@ -10,7 +10,7 @@
 
 
 // naive/brutal solution.
-const arr1 = ['a', 'b', 'c', 'x'];
+const arr1 = ['a', 'b', 'a', 'c', 'x'];
 const arr2 = ['z', 'y', 'x'];
 
 const compareDuplicate = (arr1, arr2) => {
@@ -67,7 +67,7 @@ const compareDuplicateAndReturnArr = (arr1, arr2) => {
             map[arr1[i]] = true;
         }
     }
-    // console.log(map);
+    console.log(map);
 
     for (let j = 0; j < arr2.length; j++) {
         if (map[arr2[j]]) {
@@ -78,7 +78,7 @@ const compareDuplicateAndReturnArr = (arr1, arr2) => {
     console.log(comparedElements);
 }
 
-// compareDuplicateAndReturnArr(arr1, arr2)
+compareDuplicateAndReturnArr(arr1, arr2)
 
 
 
@@ -109,4 +109,4 @@ const compareDuplicateCaseInsensitive = (arr1, arr2) => {
     console.log(comparedSameElements);
 }
 
-compareDuplicateCaseInsensitive(firstArr, secondArr)
+// compareDuplicateCaseInsensitive(firstArr, secondArr)
