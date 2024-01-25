@@ -9,16 +9,13 @@ const romanToInteger = (s) => {
         "M":1000
       };
       let result = 0;
-
       for (let i = 0; i < s.length; i++) {
         if (vals[s[i]] < vals[s[i + 1]]) {
           result += vals[s[i + 1]] - vals[s[i]]
-          i++
         } else {
           result += vals[s[i]]
         }
       }
-
       return result
 }
 
