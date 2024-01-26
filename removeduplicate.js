@@ -53,5 +53,19 @@ const removeDup3 = (nums) => {
     return k
 }
 
-const result = removeDup3(nums)
-console.log(result);
+// const result = removeDup3(nums)
+// console.log(result);
+
+
+
+const removeDuplicates = function (nums) {
+    if (!nums.length) return 0;
+  
+};
+  
+  
+  
+  const nums2 = [1,1,1,2,2,3]
+  const result2 = removeDuplicates(nums2)
+  console.log(nums2[-2]);
+  console.log(result2)

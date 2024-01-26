@@ -5,7 +5,7 @@ var longestCommonPrefix = function(strs) {
 
     for (let i = 0; i < strs[0].length; i++) {
         const character = strs[0][i]
-        // console.log(character);
+        console.log(character);
         for (let j = 0; j < strs.length; j++) {
             const see = strs[j][i]
             console.log(see,"cee");
