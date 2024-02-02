@@ -1,5 +1,5 @@
 const nums = [1, 1, 2];
-
+const nums2 = [0,0,1,1,1,1,2,3,3]
 
 // brutal force solution
 const removeDup = (arr) => {
@@ -53,7 +53,7 @@ const removeDup3 = (nums) => {
     return k
 }
 
-// const result = removeDup3(nums)
+// const result = removeDup3(nums2)
 // console.log(result);
 
 
@@ -73,6 +73,6 @@ const removeDuplicates = function (nums) {
 };
   
   
-  const nums2 = [0,0,1,1,1,1,2,3,3]
-  const result2 = removeDuplicates(nums2)
-  console.log(result2)
+//   const nums2 = [0,0,1,1,1,1,2,3,3]
+//   const result2 = removeDuplicates(nums2)
+//   console.log(result2)
