@@ -33,6 +33,30 @@ const rotate = function(nums, k) {
 
 // Example usage:
 const nums1 = [1, 2, 3, 4, 5, 6, 7];
-rotate(nums1, 3);
-console.log(nums1);  // Output: [5, 6, 7, 1, 2, 3, 4]
+// rotate(nums1, 3);
+// console.log(nums1);  
 
+
+
+
+
+
+const rotateTwo = (arr, start, end) => {
+    while (start < end) {
+        [arr[start], arr[end]] = [arr[end], arr[start]]
+
+        start++
+        end--
+    }
+}
+const testTwo = (nums, k) => {
+    rotateTwo(nums, 0, nums.length-1)
+    console.log(nums);
+
+    rotateTwo(nums, 0, k-1)
+    console.log(nums);
+
+    rotateTwo(nums, k, nums.length-1)
+}
+
+testTwo(nums1, k)
