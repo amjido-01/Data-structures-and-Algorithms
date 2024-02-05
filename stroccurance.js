@@ -9,8 +9,7 @@
     // Iterate through the haystack
     for (let i = 0; i <= haystack.length - needle.length; i++) {
         // Check for a match
-        let c = haystack.slice(i, i + needle.length)
-        if (c === needle) {
+        if (haystack.slice(i, i + needle.length) === needle) {
             return i;
         }
     }
