@@ -11,8 +11,7 @@ function canJump(nums) {
         furthestJump = Math.max(furthestJump, i+nums[i])
         console.log(furthestJump, 'hi');
     }
-    let c = true;
-    return c
+    return true;
 }
 
 let result = canJump(nums)
