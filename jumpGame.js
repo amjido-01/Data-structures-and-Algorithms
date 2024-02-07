@@ -1,18 +1,17 @@
-const nums = [2,3,1,1,4]
-// const nums = [3,2,1,0,4];
+// const nums = [2,3,1,1,4]
+const nums = [3,2,1,0,4];
 function canJump(nums) {
-    let furthestJump = 0;
 
+    let highestJump = 0;
     for (let i = 0; i < nums.length; i++) {
-        if (i > furthestJump) {
-            console.log(furthestJump, 'h');
-            return false;
+        if (i > highestJump) {
+            return false
+        } else {
+            highestJump = Math.max(highestJump, i + nums[i])
         }
-        furthestJump = Math.max(furthestJump, i+nums[i])
-        console.log(furthestJump, 'hi');
     }
-    return true;
+    return true
 }
 
 let result = canJump(nums)
-console.log(result);
+console.log(result)
