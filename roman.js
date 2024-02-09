@@ -25,36 +25,32 @@
 
 
 function intToRoman(num) {
-  const romanMap = {
-      1000: 'M',
-      900: 'CM',
-      500: 'D',
-      400: 'CD',
-      100: 'C',
-      90: 'XC',
-      50: 'L',
-      40: 'XL',
-      10: 'X',
-      9: 'IX',
-      5: 'V',
-      4: 'IV',
-      1: 'I'
-  };
-
+  const romanMap = [
+      [1000, 'M'],
+      [900, 'CM'],
+      [500, 'D'],
+      [400, 'CD'],
+      [100, 'C'],
+      [90, 'XC'],
+      [50, 'L'],
+      [40, 'XL'],
+      [10, 'X'],
+      [9, 'IX'],
+      [5, 'V'],
+      [4, 'IV'],
+      [1, 'I']
+  ];
   let result = '';
-  for (let value in romanMap) {
-      value = parseInt(value);  // Convert the key back to integer
-      while (num >= value) {
-          result += romanMap[value];  // Add the corresponding Roman numeral representation to the result
-          num -= value;               // Subtract the value from the current integer
-      }
+  for (let [value, roman] of romanMap) {
+    while(num >= value) {
+        result += roman;
+        num -= value
+    }
   }
-
-  return result;
+  return result
 }
 
 // Test cases
 console.log(intToRoman(3));    // Output: "III"
 console.log(intToRoman(58));   // Output: "LVIII"
 console.log(intToRoman(1994)); // Output: "MCMXCIV"
-
