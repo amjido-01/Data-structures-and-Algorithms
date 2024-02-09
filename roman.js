@@ -12,6 +12,7 @@ const romanToInteger = (s) => {
       for (let i = 0; i < s.length; i++) {
         if (vals[s[i]] < vals[s[i + 1]]) {
           result += vals[s[i + 1]] - vals[s[i]]
+          i++
         } else {
           result += vals[s[i]]
         }
@@ -19,5 +20,5 @@ const romanToInteger = (s) => {
       return result
 }
 
-const total = romanToInteger('CL')
+const total = romanToInteger('MCMXCIV')
 console.log(total)
