@@ -28,7 +28,7 @@ class RandomizedSet {
         const lastVal = this.arr[lastIndex];
         // asign the val to the last index 
         this.arr[idx] = lastVal;
-        
+
         this.map[lastVal] = idx;
 
         delete this.map[val];
@@ -51,3 +51,20 @@ console.log(randomizedSet.getRandom()); // Returns either 1 or 2 randomly.
 console.log(randomizedSet.remove(1)); // Removes 1 from the set, returns true.
 console.log(randomizedSet.insert(2)); // 2 was already in the set, so return false.
 console.log(randomizedSet.getRandom()); 
+
+
+
+function removeval(val) {
+    if (map[val] === undefined) {
+        return false
+    }
+
+    const lastIndx = arr.length-1;
+    const idx = map[val]
+    const lastVal= arr[lastIndx]
+    arr[idx] = lastVal
+    map[val] = idx
+    
+    delete map[val]
+    arr.pop(val)
+}
