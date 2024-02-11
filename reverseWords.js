@@ -2,6 +2,7 @@
 const s = "a good   example"
 var reverseWords = function(s) {
     let trimed = s.split(' ')
+    console.log(trimed);
     let arranged = trimed.filter(word => word !== '')
     return arranged.reverse().join(' ')
 };
