@@ -43,28 +43,37 @@ class RandomizedSet {
       }
 }
 
-const randomizedSet = new RandomizedSet();
-console.log(randomizedSet.insert(1)); // Inserts 1 to the set. Returns true.
-console.log(randomizedSet.remove(2)); // Returns false as 2 does not exist in the set.
-console.log(randomizedSet.insert(2)); // Inserts 2 to the set, returns true.
-console.log(randomizedSet.getRandom()); // Returns either 1 or 2 randomly.
-console.log(randomizedSet.remove(1)); // Removes 1 from the set, returns true.
-console.log(randomizedSet.insert(2)); // 2 was already in the set, so return false.
-console.log(randomizedSet.getRandom()); 
+// const randomizedSet = new RandomizedSet();
+// console.log(randomizedSet.insert(1)); 
+// console.log(randomizedSet.remove(2));
+// console.log(randomizedSet.insert(2)); 
+// console.log(randomizedSet.getRandom()); 
+// console.log(randomizedSet.remove(1)); 
+// console.log(randomizedSet.insert(2)); 
+// console.log(randomizedSet.getRandom()); 
 
 
+const hashmap = {
+    1: 0,
+    3: 1,
+    6: 2
+}
+const list = [1,3,6]
 
-function removeval(val) {
+function removeval(map, nums, val) {
     if (map[val] === undefined) {
         return false
     }
-
-    const lastIndx = arr.length-1;
+    const lastIndx = nums.length-1
     const idx = map[val]
-    const lastVal= arr[lastIndx]
-    arr[idx] = lastVal
-    map[val] = idx
-    
+    const lastVal = nums[lastIndx]
+
+    arr[lastVal] = idx
+    map[idx] = lastVal
+
     delete map[val]
-    arr.pop(val)
+    arr.pop()
+    
+
 }
+removeval(hashmap, list, 3)
