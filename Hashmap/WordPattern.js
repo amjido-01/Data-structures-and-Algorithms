@@ -27,3 +27,17 @@ var wordPattern = function(pattern, s) {
 
 let res = wordPattern(pattern, s)
 console.log(res);
+
+const c = "anagram"
+const d = "nagaram"
+let cSpl = c.split('')
+let dSpl = d.split("")
+console.log(cSpl.sort().join(""));
+console.log(dSpl.sort().join(""));
+
+if (cSpl.sort().join("") !== dSpl.sort().join("")) {
+  console.log('not');
+} else {
+  console.log('yep');
+}
+c.split('');
