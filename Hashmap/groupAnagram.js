@@ -1,22 +1,23 @@
 function groupAnagrams(strs) {
     const groups = {};
 
-    // Iterate through each word in the input array
     for (let i = 0; i < strs.length; i++) {
         const word = strs[i];
         // Sort each word alphabetically
         const sortedWord = word.split('').sort().join('');
-
+        console.log(sortedWord);
         // Use the sorted word as a key to group anagrams
         if (!groups[sortedWord]) {
             groups[sortedWord] = [word];
+            // console.log(groups[sortedWord], 'hello');
         } else {
             groups[sortedWord].push(word);
         }
     }
 
     // Return the values of the object
-    return Object.values(groups);
+    // return Object.values(groups);
+    return groups
 }
 
 // Test cases
