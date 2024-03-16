@@ -1,5 +1,5 @@
-const nums = [2,3,1,1,4]
-// const nums = [3,2,1,0,4]
+// const nums = [2,3,1,1,4]
+const nums = [3,2,1,0,4]
 function canJump(nums){
     let highestJum = 0;
 
@@ -8,6 +8,7 @@ function canJump(nums){
             return false
         } else {
             highestJum = Math.max(highestJum, i + nums[i])
+            console.log(highestJum);
         }
     }
     return true
