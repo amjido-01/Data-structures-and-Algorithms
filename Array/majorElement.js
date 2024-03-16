@@ -4,6 +4,10 @@ const nums2 = [3,2,3]
 var majorityElement = function(nums) {
    const sorted = nums.sort((a, b) => a -b)
    console.log(sorted);
+   const middleVal = sorted.length/2
+   console.log(middleVal);
+   const majorElem = sorted[Math.floor(middleVal)]
+   return majorElem
 };
 
 
