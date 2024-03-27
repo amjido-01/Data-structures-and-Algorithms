@@ -1,5 +1,5 @@
-// const citations = [3,0,6,1,5]
-const citations = [1,3,1]
+const citations = [3,0,6,1,5]
+// const citations = [1,3,1]
 
 function hIndex(citations) {
     // rotate to get and sort the array to get the highest value;

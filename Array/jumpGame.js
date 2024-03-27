@@ -8,7 +8,6 @@ function canJump(nums){
             return false
         } else {
             highestJum = Math.max(highestJum, i + nums[i])
-            console.log(highestJum);
         }
     }
     return true
