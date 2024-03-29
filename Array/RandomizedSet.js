@@ -77,21 +77,3 @@ const list = [1,3,6]
 
 // }
 // removeval(hashmap, list, 3)
-
-const nums = [1,2,3,4]
-var productExceptSelf = function(nums) {
-    let prod = 1;
-    let ans = []
-
-    for (let i = 0; i < nums.length; i++) {
-        prod *= nums[i]
-    }
-
-    for (let i = 0; i < nums.length; i++) {
-        ans.push(prod/nums[i])
-    }
-    return ans
-};
-
-let res = productExceptSelf(nums)
-console.log(res);
