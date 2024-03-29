@@ -60,20 +60,38 @@ const hashmap = {
 }
 const list = [1,3,6]
 
-function removeval(map, nums, val) {
-    if (map[val] === undefined) {
-        return false
-    }
-    const lastIndx = nums.length-1
-    const idx = map[val]
-    const lastVal = nums[lastIndx]
+// function removeval(map, nums, val) {
+//     if (map[val] === undefined) {
+//         return false
+//     }
+//     const lastIndx = nums.length-1
+//     const idx = map[val]
+//     const lastVal = nums[lastIndx]
 
-    arr[lastVal] = idx
-    map[idx] = lastVal
+//     arr[lastVal] = idx
+//     map[idx] = lastVal
 
-    delete map[val]
-    arr.pop()
+//     delete map[val]
+//     arr.pop()
     
 
-}
-removeval(hashmap, list, 3)
+// }
+// removeval(hashmap, list, 3)
+
+const nums = [1,2,3,4]
+var productExceptSelf = function(nums) {
+    let prod = 1;
+    let ans = []
+
+    for (let i = 0; i < nums.length; i++) {
+        prod *= nums[i]
+    }
+
+    for (let i = 0; i < nums.length; i++) {
+        ans.push(prod/nums[i])
+    }
+    return ans
+};
+
+let res = productExceptSelf(nums)
+console.log(res);
