@@ -76,3 +76,26 @@ const removeDuplicates = function (nums) {
 //   const nums2 = [0,0,1,1,1,1,2,3,3]
 //   const result2 = removeDuplicates(nums2)
 //   console.log(result2)
+
+
+
+
+
+const test = [1,1,2];
+let l = 1
+function magic(test) {
+    for (let i = 0; i < test.length-1; i++) {
+        if(test[i] !== test[i + 1]) {
+            test[l] = test[i + 1]
+            l++
+            return true
+        } else {
+            break
+        }
+    }
+    return false
+}
+
+const res = magic(test)
+console.log(res);
+
