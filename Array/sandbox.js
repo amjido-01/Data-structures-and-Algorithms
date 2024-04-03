@@ -65,3 +65,19 @@ var romanToInt = function(s) {
 
 let val = romanToInt('MCMXCIV')
 console.log(val);
+
+const  ss =  "   fly me   to   the moon  "
+
+var lengthOfLastWord = function(ss) {
+    const arr = []
+    const slpited = ss.split(" ");
+    for (let i = 0; i < slpited.length; i++) {
+        if (slpited[i] !== "") {
+            arr.push(slpited[i])
+        }
+    }
+    console.log(arr[arr.length-1].length);
+};
+
+let test = lengthOfLastWord(ss)
+console.log(test);
