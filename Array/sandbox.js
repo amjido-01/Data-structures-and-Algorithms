@@ -39,45 +39,29 @@
 
 
 
-var romanToInt = function(s) {
-    const map = {
-        "I":1,
-        "V":5,
-        "X":10,
-        "L":50,
-        "C":100,
-        "D":500,
-        "M":1000,
-        }
+// var romanToInt = function(s) {
+//     const map = {
+//         "I":1,
+//         "V":5,
+//         "X":10,
+//         "L":50,
+//         "C":100,
+//         "D":500,
+//         "M":1000,
+//         }
         
-        let res = 0;
-        for (let i = 0; i < s.length; i++) {
-            console.log(map[s[i]]);
-            if (map[s[i+1]] > map[s[i]]) {
-                res += map[s[i+1]] - map[s[i]]
-                i++
-            } else {
-                res += map[s[i]]
-            }
-        }
-        return res
-};
+//         let res = 0;
+//         for (let i = 0; i < s.length; i++) {
+//             console.log(map[s[i]]);
+//             if (map[s[i+1]] > map[s[i]]) {
+//                 res += map[s[i+1]] - map[s[i]]
+//                 i++
+//             } else {
+//                 res += map[s[i]]
+//             }
+//         }
+//         return res
+// };
 
-let val = romanToInt('MCMXCIV')
-console.log(val);
-
-const  ss =  "   fly me   to   the moon  "
-
-var lengthOfLastWord = function(ss) {
-    const arr = []
-    const slpited = ss.split(" ");
-    for (let i = 0; i < slpited.length; i++) {
-        if (slpited[i] !== "") {
-            arr.push(slpited[i])
-        }
-    }
-    console.log(arr[arr.length-1].length);
-};
-
-let test = lengthOfLastWord(ss)
-console.log(test);
+// let val = romanToInt('MCMXCIV')
+// console.log(val);
