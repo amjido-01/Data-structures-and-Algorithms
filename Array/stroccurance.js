@@ -1,6 +1,5 @@
   function strStr2(haystack, needle) {
     // Check for edge cases
-    console.log(haystack.length, 'hy')
     if (needle === "") return 0;
     if (needle.length > haystack.length) {
         return -1;

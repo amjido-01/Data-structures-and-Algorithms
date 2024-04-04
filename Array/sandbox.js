@@ -65,3 +65,13 @@
 
 // let val = romanToInt('MCMXCIV')
 // console.log(val);
+
+var reverseWords = function(s) {
+    let splited = s.split(" ")
+    console.log(splited);
+    const filtered = splited.filter((item) => item !== "");
+    console.log(filtered);
+    return filtered.reverse().join(" ")
+};
+let val = reverseWords("the sky is blue")
+console.log(val);
