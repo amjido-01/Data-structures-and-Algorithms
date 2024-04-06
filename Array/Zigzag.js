@@ -8,9 +8,8 @@ function convert(s, numRows) {
   
     for (let i = 0; i < s.length; i++) {
       rows[currentRow] += s[i]; // Add character to current row
-    //  P, A, Y, P, A, L, I, S, H, I, R, I, N, G
-    //  0  1  2  3  4  5  6  7  8  9  10  11 12
-
+      //  P, A, Y, P, A, L, I, S, H, I, R, I, N, G
+      //  0  1  2  3  4  5  6  7  8  9  10  11 12
 
       // Determine next row based on zigzag pattern
       currentRow = goingDown ? currentRow + 1 : currentRow - 1;
@@ -22,7 +21,7 @@ function convert(s, numRows) {
     }
     console.log(rows);
   
-    return rows.join(''); // Combine rows into the final string
+    return rows.join('');
   }
 
   const res = convert('PAYPALISHIRING', 3)
