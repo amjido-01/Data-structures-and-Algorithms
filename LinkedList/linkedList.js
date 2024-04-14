@@ -19,10 +19,22 @@ class linkedList {
             value: value,
             next: null
         }
-        this.tail = this.head
+        this.tail = this.head;
         this.length = 1
+    }
+    // append at the end of the linked list
+    append(value) {
+        const newNode = {
+            value: value,
+            next: null
+        }
+        this.tail.next = newNode
+        this.tail = newNode
+        this.length++
+        return this
     }
 }
 
 const myLinkedList = new linkedList(10)
+myLinkedList.append(20)
 console.log(myLinkedList);
