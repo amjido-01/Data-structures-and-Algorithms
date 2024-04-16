@@ -43,10 +43,21 @@ class linkedList {
         this.length++
         return this
     }
+    printList() {
+        const arr = []
+        let currNode = this.head;
+        while(currNode !== null) {
+            arr.push(currNode.value)
+            currNode = currNode.next
+        }
+        return arr
+    }
 }
 
 const myLinkedList = new linkedList(10)
 myLinkedList.append(20)
 myLinkedList.prepend(4)
 myLinkedList.prepend(0)
+myLinkedList.printList()
 console.log(myLinkedList);
+console.log(myLinkedList.printList());
