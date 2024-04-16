@@ -13,6 +13,9 @@
 //     }
 // }
 
+// in sha Allah, I will damn make it.
+
+
 class linkedList {
     constructor(value) {
         this.head = {
