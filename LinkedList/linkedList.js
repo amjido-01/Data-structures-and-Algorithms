@@ -17,19 +17,29 @@ class linkedList {
     constructor(value) {
         this.head = {
             value: value,
-            next: null
+            next: null,
         }
-        this.tail = this.head;
+        this.tail = this.head
         this.length = 1
     }
-    // append at the end of the linked list
+
     append(value) {
         const newNode = {
             value: value,
             next: null
         }
-        this.tail.next = newNode
-        this.tail = newNode
+        this.tail.next = newNode,
+        this.tail = newNode,
+        this.length++
+        return this
+    }
+    prepend(value) {
+        const newNode = {
+            value: value,
+            next: null
+        }
+        newNode.next = this.head
+        this.head = newNode
         this.length++
         return this
     }
@@ -37,4 +47,6 @@ class linkedList {
 
 const myLinkedList = new linkedList(10)
 myLinkedList.append(20)
+myLinkedList.prepend(4)
+myLinkedList.prepend(0)
 console.log(myLinkedList);
