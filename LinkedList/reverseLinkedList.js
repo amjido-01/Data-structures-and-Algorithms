@@ -29,7 +29,18 @@ class ListNode {
         }
         return arr
     }
-    
+    reverse() {
+        let prev = null;
+        let curr = this.head;
+        while(curr) {
+            let nextTemp = curr.next;
+
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
 }
 
 let myLinkedList = new ListNode(10);
