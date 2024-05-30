@@ -32,6 +32,7 @@ class ListNode {
     reverse() {
         let prev = null;
         let curr = this.head;
+        this.tail = this.head;
         while(curr) {
             let nextTemp = curr.next;
 
@@ -39,12 +40,18 @@ class ListNode {
             prev = curr;
             curr = nextTemp;
         }
-        return prev;
+        this.head = prev;
+        return this.printList();
+        // return this.printList();
+        // return prev;
     }
 }
 
 let myLinkedList = new ListNode(10);
+// myLinkedList.reverse()
 myLinkedList.append(5)
 myLinkedList.append(16)
 myLinkedList.append(8);
+myLinkedList.append(15);
 console.log(myLinkedList.printList());
+console.log(myLinkedList.reverse());
