@@ -20,11 +20,3 @@ var reverseStr = function(s, k) {
 //  return arr.join('');
 };
 reverseStr("abcdefg", 2)
-
-
-let test = [1, 2, 3, 4, 5, 6]
-console.log(test.splice(1, 1))
-for(let i = test.length - 1; i >= 0; i--) {
-    // remove element at index 4
-    // console.log(test.splice(1, 1))
-}
