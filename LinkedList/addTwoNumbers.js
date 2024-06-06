@@ -35,7 +35,7 @@ class ListNode {
             carry = 0
         }
         const result = list.next;
-        result.printList(); // Print the resulting linked list
+        result.printList();
         return result;
     };
     printList() {
