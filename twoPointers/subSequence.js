@@ -7,7 +7,7 @@ function subSequence(s, t) {
     let len_of_s = s.length;
     let len_of_t = t.length;
     while (i < len_of_s && j < len_of_t) {
-        if (s[i] === t[i]) {
+        if (s[i] === t[j]) {
             i++;
             j++
         } else {
