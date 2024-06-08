@@ -1,4 +1,4 @@
-const nums = [2,11,15, 7];
+const nums = [2,7,11,15];
 const target = 9;
 
 const twoSum = (arr, target) => {
@@ -20,15 +20,15 @@ console.log(result);
 // brute force
 // const nums = [2,11,15, 7];
 
-const twoSum2 = (arr, tar) => {
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i+1; j <arr.length; j++) {
-            if (arr[i] + arr[j] === tar) {
-                return [ i, j ]
-            }
-        }
-    }
-}
+// const twoSum2 = (arr, tar) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i+1; j <arr.length; j++) {
+//             if (arr[i] + arr[j] === tar) {
+//                 return [ i, j]
+//             }
+//         }
+//     }
+// }
 
-const result2 = twoSum2(nums, target)
-console.log(result2);
+// const result2 = twoSum2(nums, target)
+// console.log(result2);
