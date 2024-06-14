@@ -1,8 +1,10 @@
 var threeSum = function(nums) {
     let res = [];
     nums.sort((a, b) => a - b);
+    console.log(nums)
 
     for (let i = 0; i < nums.length; i++) {
+        // console.log(nums[i-1], "hello");
         if (i > 0 && nums[i] === nums[i-1]) {
             continue;
         }
