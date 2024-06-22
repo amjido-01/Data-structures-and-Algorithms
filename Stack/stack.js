@@ -46,8 +46,8 @@ class Node {
   console.log(myStack.push("google"));
   console.log(myStack.push("google2"));
   console.log(myStack.peek());
-//   console.log(myStack.pop());
-//   console.log(myStack.pop());
+  console.log(myStack.pop());
+  console.log(myStack.pop());
 
 
 
@@ -59,12 +59,10 @@ class Node {
 //       return this.stack[this.stack.length-1];
 //     }
 //     push(value){
-//       this.stack.push(value);
-//       return this;
+//       return this.stack.push(value);
 //     }
 //     pop(){
-//       this.stack.pop();
-//       return this;
+//       return this.stack.pop();
 //     }
 //   }
   
@@ -76,6 +74,7 @@ class Node {
 //   myStack.peek();
 //   myStack.pop();
 //   myStack.pop();
+//   console.log(myStack)
 //   myStack.pop();
   
   

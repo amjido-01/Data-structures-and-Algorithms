@@ -1,4 +1,4 @@
-// const tokens = ["2","1","+","3","*"]
+const tokens1 = ["2","1","+","3","*"]
 // let tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 let tokens = ["4","13","5","/","+"]
 var evalRPN = function(tokens) {
