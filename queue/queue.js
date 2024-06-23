@@ -48,23 +48,31 @@ class Queue {
     constructor() {
         this.first = [];
         this.last = [];
-        this.length = 0
     }
 
     enqueue(value) {
-        let length = this.length
-        for (let i = 0; i < length; i++) {
-            this.last.push(this.first.pop())
-        }
-        return this.first.push(value)
+       this.first.push(value)
     }
 
     deQueue() {
-        let length = this.length
-        for (let i = 0; i < length; i++) {
-            this.first.push(this.last.pop())
+       if (this.last.length === 0) {
+        while(this.first.length > 0) {
+            this.last.push(this.first.pop())
         }
-        return this.first.pop()
+       }
+       return this.last.pop()
+    }
+
+    peek() {
+        if (this.last.length === 0) {
+            while(this.first.length > 0) {
+                this.last.push(this.first.pop())
+            }
+        }
+        return this.last[this.last.length - 1]
+    }
+    isEmpty() {
+        return this.first.length === 0 && this.last.length === 0;
     }
 }
 
