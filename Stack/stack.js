@@ -21,10 +21,11 @@ class Node {
         this.bottom = newNode;
       } else {
         const holdingPointer = this.top;
+        console.log(holdingPointer, "holdingPointer");
         this.top = newNode;
-        this.top.next = holdingPointer;
         console.log(this.top, "this.top");
-        console.log(holdingPointer, "holdingPointer");  
+        this.top.next = holdingPointer;
+        console.log(this.top.next, "this.top.next");  
       }
       this.length++;
       return this;
@@ -44,10 +45,10 @@ class Node {
   
   const myStack = new Stack();
   console.log(myStack.push("google"));
-  console.log(myStack.push("google2"));
+  console.log(myStack.push("microsoft"));
   console.log(myStack.peek());
-  console.log(myStack.pop());
-  console.log(myStack.pop());
+//   console.log(myStack.pop());
+//   console.log(myStack.pop());
 
 
 
