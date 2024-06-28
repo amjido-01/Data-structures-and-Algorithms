@@ -1,7 +1,6 @@
 var firstUniqChar = function(s) {
     let hashMap = {}
     let val = []
-    // leetcode
     for (let char of s) {
         if (hashMap[char] === undefined) {
             hashMap[char] = 1
@@ -10,8 +9,9 @@ var firstUniqChar = function(s) {
         }
     }
 
-    let nums = Object.keys(hashMap);
-    for (let i of nums) {
+    let letter = Object.keys(hashMap);
+    console.log(letter);
+    for (let i of letter) {
         if (hashMap[i] === 1) {
             val.push(i)
         }
