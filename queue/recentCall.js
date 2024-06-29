@@ -5,14 +5,12 @@ class RecentCounter {
 
     ping(t) {
         this.myQueue.push(t)
-        console.log(this.myQueue)
         while (this.myQueue.length) {
             if (this.myQueue[0] < t - 3000) {
                 this.myQueue.shift()
             } else {
                 break
             }
-          console.log(this.myQueue.length)
         }
     }
 }
