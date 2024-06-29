@@ -25,7 +25,8 @@ var evalRPN = function(tokens) {
             }
         }
     }
+    console.log(stack)
     return stack[0]
 }
-let result = evalRPN(tokens);
+let result = evalRPN(tokens1);
 console.log(result)
