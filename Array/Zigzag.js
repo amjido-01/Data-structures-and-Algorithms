@@ -26,3 +26,5 @@ function convert(s, numRows) {
 
   const res = convert('PAYPALISHIRING', 3)
   console.log(res)
+
+  
