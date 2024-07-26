@@ -1,7 +1,25 @@
+// function maxDepth(root) {
+//     if (!root) return null;
+
+//     let max = Math.max(maxDepth(root.left), maxDepth(root.right))
+
+//     return max + 1
+// }
+
 function maxDepth(root) {
-    if (!root) return null;
+    if (!root) return 0;
 
-    let max = Math.max(maxDepth(root.left), maxDepth(root.right))
+    let level = 0; 
+    let queue = [];
 
-    return max + 1
+    while (queue.length) {
+        let count = queue.length;
+        for (let i = 0; i < count; i++) {
+            let node = queue.shift();
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+        level++;
+    }
+    return level;
 }
