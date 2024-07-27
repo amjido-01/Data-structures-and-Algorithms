@@ -16,18 +16,18 @@ class BinarySearchTree {
         if (!root) {
             this.root = newNode;
         } else {
-            let curNode = this.root
+            let curNode = this.root;
             while(true) {
                 if (curNode.value > value) {
                     if (!curNode.left) {
                         curNode.left = newNode;
-                        return this
+                        return this;
                     }
-                    curNode = curNode.left
+                    curNode = curNode.left;
                 } else {
                     if (!curNode.right) {
                         curNode.right = newNode;
-                        return this
+                        return this;
                     }
                     curNode = curNode.right;
                 }
