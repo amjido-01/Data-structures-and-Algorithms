@@ -5,13 +5,13 @@ var evalRPN = function(tokens) {
     const stack = []
     for (let token of tokens) {
         let parsedVal = parseInt(token)
-
+        console.log(parsedVal, "parsed");
         if (!isNaN(parsedVal)) {
             stack.push(parsedVal)
+            console.log(stack);
         } else {
             let right = stack.pop()
             let left = stack.pop()
-            console.log(stack);
             if (token === "+") {
                 stack.push(left + right)
             } else if (token === "-") {
@@ -20,6 +20,7 @@ var evalRPN = function(tokens) {
                 stack.push(left * right)
             } else if (token === "/") {
                 stack.push(parseInt(left / right))
+                console.log(stack.push(parseInt(left / right)), "hello");
             } else {
                 return "Invalid input"
             }
@@ -28,5 +29,5 @@ var evalRPN = function(tokens) {
     console.log(stack)
     return stack[0]
 }
-let result = evalRPN(tokens1);
+let result = evalRPN(tokens);
 console.log(result)
